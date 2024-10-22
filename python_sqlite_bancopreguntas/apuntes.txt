@@ -1,0 +1,16 @@
+'''
+CREATE TABLE IF NOT EXISTS Pregunta(
+  id_pregunta   INT       NOT NULL PRIMARY KEY AUTOINCREMENT,
+  pregunta      TEXT      NOT NULL,
+  respuesta     CHAR(1)   NOT NULL
+);
+'''
+'''
+CREATE TABLE IF NOT EXISTS Opcion (
+  id_opcion           INT     NOT NULL PRIMARY KEY AUTOINCREMENT,
+  id_pregunta         INT     NOT NULL,
+  opcion              TEXT    NOT NULL,
+  letra               CHAR(1) NOT NULL,
+  FOREIGN KEY (id_pregunta) REFERENCES Pregunta (id_pregunta)
+);
+'''

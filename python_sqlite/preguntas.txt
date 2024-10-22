@@ -1,0 +1,39 @@
+1. CREAR LA BASE DE DATOS DEL SCRIPT
+2. MOSTRAR POR CADA MEDICO EL NUMERO DE CONSULTAS REALIZADAS
+
+SELECT DISTINCT nombreMedico FROM Consulta;
+
+SELECT nombreMedico, COUNT(*) AS CONSULTAS FROM Consulta GROUP BY nombreMedico ORDER BY nombreMedico;
+
+> MOSTRAR TODAS LAS CONSULTAS DEL AÑO 2012
+
+SELECT strftime('%Y', fecha), nombreMedico FROM Consulta WHERE strftime('%Y', fecha) = '2012';
+
+> MOSTRAR EL NUMERO DE CONSULTAS TOTALES POR CADA AÑO
+
+SELECT strftime('%Y', fecha) AS AÑO, COUNT(*) AS N_CONSULTAS
+FROM Consulta
+GROUP BY strftime('%Y', fecha);
+
+> MOSTRAR EL AÑO CON EL MAYOR NUMERO DE CONSULTAS
+
+SELECT strftime('%Y', fecha) AS AÑO, COUNT(*) AS N_CONSULTAS
+FROM Consulta
+GROUP BY strftime('%Y', fecha)
+ORDER BY N_CONSULTAS DESC
+LIMIT 1;
+
+> HACER UN PROGRAMA PYTHON QUE CREE UNA TABLA POR CADA AÑO
+  LUEGO INSERTAR EN CADA TABLA LAS CONSULTAS RESPECTIVAS SEGUN SU AÑO.
+
+  CREATE TABLE CONSULTA_2012 (
+    numeroConsulta TEXT(10) NOT NULL,
+    fecha          TEXT     NOT NULL,
+    nombreMedico   TEXT(50) NOT NULL,
+    deinpr         TEXT(20) NOT NULL,
+    procedencia    TEXT(20) NOT NULL,
+                   PRIMARY KEY (numeroConsulta)
+  );
+
+
+

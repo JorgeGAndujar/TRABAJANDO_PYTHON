@@ -1,0 +1,7 @@
+(1) INSTALAR
+
+pip install mysql-connector-python
+
+(2) ACTUALIZAR EL GESTOR DE PAQUETES DE PYTHON 
+
+python.exe -m pip install --upgrade pip

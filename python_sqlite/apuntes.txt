@@ -1,0 +1,44 @@
+----------------------------------------------------------------
+1. date
+Devuelve la fecha en formato YYYY-MM-DD.
+Ejemplo: SELECT date('now');
+Resultado: La fecha actual (como 2024-11-05).
+2. time
+Devuelve la hora en formato HH:MM:SS.
+Ejemplo: SELECT time('now');
+Resultado: La hora actual (como 12:34:56).
+3. datetime
+Devuelve la fecha y hora en formato YYYY-MM-DD HH:MM:SS.
+Ejemplo: SELECT datetime('now');
+Resultado: La fecha y hora actual (como 2024-11-05 12:34:56).
+4. strftime
+Permite formatear la fecha y hora según tus necesidades.
+Ejemplo: SELECT strftime('%Y-%m-%d %H:%M:%S', 'now');
+Resultado: Fecha y hora en el formato deseado (como 2024-11-05 12:34:56).
+5. Calcular diferencias y agregar intervalos
+Puedes hacer cálculos de fecha, como sumar días, restar meses, etc.
+Ejemplo de sumar días:
+
+sql
+Copiar código
+SELECT date('now', '+7 days');
+Resultado: La fecha actual más 7 días.
+Ejemplo de restar meses:
+
+sql
+Copiar código
+SELECT date('now', '-1 month');
+Resultado: La fecha actual menos un mes.
+6. Diferencia en días entre dos fechas
+Puedes calcular el número de días entre dos fechas usando julianday.
+sql
+Copiar código
+SELECT julianday('2024-12-01') - julianday('2024-11-05');
+Resultado: Número de días entre el 5 de noviembre y el 1 de diciembre (como 26 días).
+7. Día de la semana
+Para obtener el día de la semana de una fecha (donde 0 = domingo, 1 = lunes, ..., 6 = sábado).
+sql
+Copiar código
+SELECT strftime('%w', '2024-11-05');
+Resultado: 2 (martes).
+Estas funciones son muy útiles para manipular fechas en SQLite, especialmente para realizar consultas y formatear resultados según necesidades específicas.

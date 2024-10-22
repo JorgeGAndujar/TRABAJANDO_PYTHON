@@ -1,0 +1,17 @@
+[
+    {
+      "nombre": "Juan Pérez",
+      "edad": 20,
+      "curso": "Matemáticas"
+    },
+    {
+        "nombre": "María Gómez",
+        "edad": 22,
+        "curso": "Historia"
+    },
+    {
+        "nombre": "Carlos López",
+        "edad": 19,
+        "curso": "Inglés"
+    }
+]
