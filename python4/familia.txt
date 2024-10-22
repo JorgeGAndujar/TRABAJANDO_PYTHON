@@ -1,0 +1,39 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+nombres = ["Jose", "Isabel", "Juan", "Maria", "Eva", "Marilu"]
+condicion = ["Hijo", "Madre", "Padre", "Hija", "Hija", "Hija"]
+edad = [12, 35, 40, 43, 25, 3, 15]
+sexo = ["H", "M", "H", "M", "M", "M"]
+peso = [35, 60, 70, 55, 12, 40]
+
+nombres_np = np.array(nombres)
+condicion_np = np.array(condicion)
+edad_np = np.array(edad)
+sexo_np = np.array(sexo)
+peso_np = np.array(peso)
+
+#Cantidad Hijas
+cantidad_hijas = np.sum(condicion_np == "Hija")
+print("Cantidad de Hijas en la familia:", cantidad_hijas)
+
+#Promedio de edad de la familia
+promedio_edad = np.mean(edad_np)
+print("Promedio de Edad en la familia:", promedio_edad, "años.")
+
+#Cantidad de varones en la familia
+cantidad_varones = np.sum(sexo_np == "H")
+print("Cantidad de varones en la familia:", cantidad_varones)
+
+#Cantidad de integrantes de la familia peso > 40kg
+superan_40kg = np.sum(peso_np > 40)
+print("Cantidad de integrantes que superan los 40 kilos:", superan_40kg)
+
+#Mayor edad
+mayor_edad = np.max(edad_np)
+print("Mayor de edad:", mayor_edad)
+
+#Menor peso
+menor_peso = np.min(peso_np)
+print("Menor peso:", menor_peso)
+

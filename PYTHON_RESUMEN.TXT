@@ -1,0 +1,39 @@
+VARIABLES DE ENTORNO
+--------------------
+C:\Users\Jorge\AppData\Local\Programs\Python\Python313
+C:\Users\Jorge\AppData\Local\Programs\Python\Python313\Script
+
+ENTORNO VIRTUAL
+---------------
+-CREAR UN ENTORNO VIRTUAL
+
+py -3.13 -m vent entorno_python3.13
+
+-ACTIVAR UN ENTORNO 
+
+entorno_python3.13\Scripts\activate
+
+-DESACTIVAR UN ENTORNO 
+
+C:\TRABAJANDO_PYTHON>entorno_python3.13\Scripts\deactivate
+
+-ANACONDA (DISTRIBUCION)
+-------------------------
+*************************
+*** SINTAXIS ************
+*************************
+- TIPOS DE DATOS SON DINAMICOS
+x = 10
+print("X: ", x)
+print(type(x))
+
+x = "Hola Mundo"
+print("X: ", x)
+print(type(x))
+
+-FUNCION 
+
+def sumar(n1, n2):
+    r = n1 + n2
+    return r
+
